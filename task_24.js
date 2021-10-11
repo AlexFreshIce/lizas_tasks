@@ -1,94 +1,92 @@
 // http://www.codewars.com/kata/calculating-with-functions
-function zero(n) {
-  if (n) {
-    console.log(n);
-    return Math.floor(eval("0" + n));
+function zero(myFunc) {
+  if (myFunc) {
+    return myFunc(0);
   } else {
-    return "0";
+    return 0;
   }
 }
-function one(n) {
-  if (n) {
-    console.log(n);
-    return Math.floor(eval("1" + n));
+function one(myFunc) {
+  if (myFunc) {
+    return myFunc(1);
   } else {
-    return "1";
+    return 1;
   }
 }
-function two(n) {
-  if (n) {
-    console.log(n);
-    return Math.floor(eval("2" + n));
+function two(myFunc) {
+  if (myFunc) {
+    return myFunc(2);
   } else {
-    return "2";
+    return 2;
   }
 }
-function three(n) {
-  if (n) {
-    console.log(n);
-    return Math.floor(eval("3" + n));
+function three(myFunc) {
+  if (myFunc) {
+    return myFunc(3);
   } else {
-    return "3";
+    return 3;
   }
 }
-function four(n) {
-  if (n) {
-    console.log(n);
-    return Math.floor(eval("4" + n));
+function four(myFunc) {
+  if (myFunc) {
+    return myFunc(4);
   } else {
-    return "4";
+    return 4;
   }
 }
-function five(n) {
-  if (n) {
-    console.log(n);
-    return Math.floor(eval("5" + n));
+function five(myFunc) {
+  if (myFunc) {
+    return myFunc(5);
   } else {
-    return "5";
+    return 5;
   }
 }
-function six(n) {
-  if (n) {
-    console.log(n);
-    return Math.floor(eval("6" + n));
+function six(myFunc) {
+  if (myFunc) {
+    return myFunc(6);
   } else {
-    return "6";
+    return 6;
   }
 }
-function seven(n) {
-  if (n) {
-    console.log(n);
-    return Math.floor(eval("7" + n));
+function seven(myFunc) {
+  if (myFunc) {
+    return myFunc(7);
   } else {
-    return "7";
+    return 7;
   }
 }
-function eight(n) {
-  if (n) {
-    console.log(n);
-    return Math.floor(eval("8" + n));
+function eight(myFunc) {
+  if (myFunc) {
+    return myFunc(8);
   } else {
-    return "8";
+    return 8;
   }
 }
-function nine(n) {
-  if (n) {
-    console.log(n);
-    return Math.floor(eval("9" + n));
+function nine(myFunc) {
+  if (myFunc) {
+    return myFunc(9);
   } else {
-    return "9";
+    return 9;
   }
 }
 
-function plus(n) {
-  return "+" + n;
+function plus(rNumb) {
+  return function (lNumb) {
+    return Math.floor(lNumb + rNumb);
+  };
 }
-function minus(n) {
-  return "-" + n;
+function minus(rNumb) {
+  return function (lNumb) {
+    return Math.floor(lNumb - rNumb);
+  };
 }
-function times(n) {
-  return "*" + n;
+function times(rNumb) {
+  return function (lNumb) {
+    return Math.floor(lNumb * rNumb);
+  };
 }
-function dividedBy(n) {
-  return "/" + n;
+function dividedBy(rNumb) {
+  return function (lNumb) {
+    return Math.floor(lNumb / rNumb);
+  };
 }
